@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Charles Lauret — TSSR</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0D1117; --surface:#161B22; --surface-2:#1c2229; --border:#2b3440;
+    --text:#E6EDF0; --text-dim:#8b98a5; --cobalt:#58A6FF; --emerald:#2EA44F; --amber:#e3b341;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,'SF Mono',monospace;}
+  .prompt::before{content:"charles@tssr:~$ "; color:var(--emerald); opacity:.75;}
+  .card{background:var(--surface); border:1px solid var(--border);}
+  .winbar{background:var(--surface-2); border-bottom:1px solid var(--border);}
+  .dot{width:9px;height:9px;border-radius:999px;display:inline-block;}
+  .blink{animation:blink 1.8s steps(1) infinite;}
+  @keyframes blink{50%{opacity:.25;}}
+  @media (prefers-reduced-motion: reduce){.blink{animation:none;}}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--cobalt); outline-offset:3px; border-radius:3px;}
+  .skill-tag{background:var(--surface-2); border:1px solid var(--border); color:var(--text-dim);}
+  .accent-line{background:linear-gradient(180deg,var(--cobalt),transparent);}
+  ::selection{background:var(--cobalt); color:#fff;}
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- NAV -->
+<header class="sticky top-0 z-30 backdrop-blur border-b" style="background:rgba(10,14,20,.85); border-color:var(--border);">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
+    <span class="mono text-sm" style="color:var(--text-dim)">CL<span style="color:var(--cobalt)">_</span>TSSR</span>
+    <nav class="hidden sm:flex gap-6 mono text-xs" style="color:var(--text-dim)">
+      <a href="#apropos" class="hover:text-white transition-colors">a-propos</a>
+      <a href="#competences" class="hover:text-white transition-colors">competences</a>
+      <a href="#parcours" class="hover:text-white transition-colors">parcours</a>
+      <a href="#projets" class="hover:text-white transition-colors">projets</a>
+      <a href="#contact" class="hover:text-white transition-colors">contact</a>
+    </nav>
+    <a href="mailto:charles_lauret@outlook.fr" class="mono text-xs px-3 py-1.5 rounded border transition-colors hover:border-[var(--cobalt)]" style="border-color:var(--border); color:var(--text)">contacter</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-5xl mx-auto px-5 sm:px-8 pt-16 pb-14">
+  <div class="grid sm:grid-cols-[auto_1fr] gap-8 items-start mb-10">
+    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mono text-2xl font-medium shrink-0" style="background:var(--surface-2); border:1px solid var(--border); color:var(--cobalt)">CL</div>
+    <div>
+      <p class="mono text-xs mb-3" style="color:var(--emerald)"><span class="blink">●</span>&nbsp; disponible immédiatement — rythme 3 sem. entreprise / 1 sem. cfa</p>
+      <h1 class="text-3xl sm:text-5xl font-semibold leading-tight tracking-tight mb-3">Charles Lauret</h1>
+      <p class="text-base sm:text-lg mb-6" style="color:var(--text-dim)">Futur Technicien Supérieur Systèmes &amp; Réseaux</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="mailto:charles_lauret@outlook.fr" class="mono text-xs px-4 py-2.5 rounded font-medium transition-transform hover:-translate-y-0.5" style="background:var(--cobalt); color:#0D1117;">envoyer un email</a>
+        <a href="https://www.linkedin.com/in/charles-lauret" target="_blank" rel="noopener" class="mono text-xs px-4 py-2.5 rounded border transition-colors hover:border-[var(--cobalt)]" style="border-color:var(--border);">linkedin</a>
+        <a href="https://github.com/lauretcharles27-jpg" target="_blank" rel="noopener" class="mono text-xs px-4 py-2.5 rounded border transition-colors hover:border-[var(--cobalt)]" style="border-color:var(--border);">github</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 rounded-lg overflow-hidden card">
+    <div class="p-5 text-center border-r" style="border-color:var(--border)">
+      <p class="text-xl sm:text-2xl font-semibold" style="color:var(--cobalt)">3</p>
+      <p class="mono text-xs mt-1" style="color:var(--text-dim)">labos réalisés</p>
+    </div>
+    <div class="p-5 text-center border-r" style="border-color:var(--border)">
+      <p class="text-xl sm:text-2xl font-semibold" style="color:var(--cobalt)">4</p>
+      <p class="mono text-xs mt-1" style="color:var(--text-dim)">formations suivies</p>
+    </div>
+    <div class="p-5 text-center">
+      <p class="text-xl sm:text-2xl font-semibold" style="color:var(--emerald)">now</p>
+      <p class="mono text-xs mt-1" style="color:var(--text-dim)">dispo immédiate</p>
+    </div>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section id="apropos" class="max-w-5xl mx-auto px-5 sm:px-8 py-14 border-t" style="border-color:var(--border)">
+  <p class="mono text-xs prompt mb-2" style="color:var(--text-dim)">cat a-propos.md</p>
+  <h2 class="text-2xl sm:text-3xl font-semibold mb-6">À propos</h2>
+  <p class="max-w-2xl text-sm sm:text-base leading-relaxed" style="color:var(--text-dim)">
+    Passionné par les infrastructures, je prépare le Titre Professionnel TSSR. Je recherche activement une alternance pour mettre mes compétences en administration système, réseaux et sécurité au service d'une équipe technique et garantir la performance de vos infrastructures au quotidien.
+  </p>
+</section>
+
+<!-- COMPETENCES -->
+<section id="competences" class="max-w-5xl mx-auto px-5 sm:px-8 py-14 border-t" style="border-color:var(--border)">
+  <p class="mono text-xs prompt mb-2" style="color:var(--text-dim)">cat competences.txt</p>
+  <h2 class="text-2xl sm:text-3xl font-semibold mb-10">Compétences</h2>
+
+  <div class="grid sm:grid-cols-2 gap-5">
+    <div class="card rounded-lg p-6">
+      <p class="mono text-xs mb-4" style="color:var(--cobalt)">systemes</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Windows Server (AD, GPO)</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Linux Debian / Ubuntu</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">VMware</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Hyper-V</span>
+      </div>
+    </div>
+    <div class="card rounded-lg p-6">
+      <p class="mono text-xs mb-4" style="color:var(--cobalt)">reseaux &amp; securite</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Cisco Switch/Router</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">TCP/IP · VLAN</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">DHCP / DNS</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Pare-feu / VPN</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Nagios · Zabbix</span>
+      </div>
+    </div>
+    <div class="card rounded-lg p-6">
+      <p class="mono text-xs mb-4" style="color:var(--cobalt)">support &amp; cloud</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Helpdesk · GLPI</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">AWS / Azure (intro)</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Bash</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">PowerShell</span>
+      </div>
+    </div>
+    <div class="card rounded-lg p-6">
+      <p class="mono text-xs mb-4" style="color:var(--cobalt)">savoir-etre</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Diagnostic &amp; analyse</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Réactivité pannes</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Pédagogie utilisateur</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Confidentialité</span>
+        <span class="skill-tag text-xs mono px-2.5 py-1 rounded">Travail d'équipe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours" class="max-w-5xl mx-auto px-5 sm:px-8 py-14 border-t" style="border-color:var(--border)">
+  <p class="mono text-xs prompt mb-2" style="color:var(--text-dim)">tail -f parcours.log</p>
+  <h2 class="text-2xl sm:text-3xl font-semibold mb-10">Parcours</h2>
+
+  <ol class="relative pl-8">
+    <span class="accent-line absolute left-[7px] top-1 bottom-1 w-px"></span>
+
+    <li class="relative pb-10">
+      <span class="absolute -left-8 top-1 w-3.5 h-3.5 rounded-full border-2" style="background:var(--bg); border-color:var(--text-dim)"></span>
+      <p class="mono text-xs mb-1" style="color:var(--text-dim)">2008 — 2009</p>
+      <h3 class="font-medium mb-1">Bac STI Génie Électronique — obtenu</h3>
+      <p class="text-sm" style="color:var(--text-dim)">Lycée Roland Garros · Validation des bases scientifiques et techniques en électronique et systèmes automatiques.</p>
+    </li>
+
+    <li class="relative pb-10">
+      <span class="absolute -left-8 top-1 w-3.5 h-3.5 rounded-full border-2" style="background:var(--bg); border-color:var(--text-dim)"></span>
+      <p class="mono text-xs mb-1" style="color:var(--text-dim)">2010 — 2012</p>
+      <h3 class="font-medium mb-1">Niveau BTS Systèmes Électroniques</h3>
+      <p class="text-sm" style="color:var(--text-dim)">Lycée Roland Garros · Étude approfondie des systèmes interconnectés, de la logique numérique et du diagnostic de pannes matérielles.</p>
+    </li>
+
+    <li class="relative pb-10">
+      <span class="absolute -left-8 top-1 w-3.5 h-3.5 rounded-full border-2" style="background:var(--bg); border-color:var(--text-dim)"></span>
+      <p class="mono text-xs mb-1" style="color:var(--text-dim)">2019 — 2021</p>
+      <h3 class="font-medium mb-1">Formation Administrateur Réseaux</h3>
+      <p class="text-sm" style="color:var(--text-dim)">Académie des Savoirs · Acquisition des compétences fondamentales en gestion d'infrastructures réseaux, routage et support informatique.</p>
+    </li>
+
+    <li class="relative">
+      <span class="absolute -left-8 top-1 w-3.5 h-3.5 rounded-full" style="background:var(--emerald)"></span>
+      <p class="mono text-xs mb-1" style="color:var(--emerald)">2026 — en cours</p>
+      <h3 class="font-medium mb-1">Titre Professionnel TSSR</h3>
+      <p class="text-sm" style="color:var(--text-dim)">CCIR Réunion — École du Numérique · Spécialisation en administration systèmes, virtualisation, sécurité des réseaux et préparation opérationnelle au terrain.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- PROJETS -->
+<section id="projets" class="max-w-5xl mx-auto px-5 sm:px-8 py-14 border-t" style="border-color:var(--border)">
+  <p class="mono text-xs prompt mb-2" style="color:var(--text-dim)">ls -la projets/</p>
+  <h2 class="text-2xl sm:text-3xl font-semibold mb-10">Projets &amp; labos</h2>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+    <div class="card rounded-lg overflow-hidden flex flex-col">
+      <div class="winbar flex items-center gap-2 px-4 py-2.5">
+        <span class="dot" style="background:#f16057"></span><span class="dot" style="background:var(--amber)"></span><span class="dot" style="background:var(--emerald)"></span>
+        <span class="mono text-xs ml-2 truncate" style="color:var(--text-dim)">parc-virtuel.log</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="font-medium mb-2 text-sm">Déploiement d'un parc informatique virtuel</h3>
+        <p class="text-xs mb-4 flex-1" style="color:var(--text-dim)">Mise en place d'un environnement Windows Server avec Active Directory et GPO, connecté à des postes clients sous Windows 10/11 virtualisés via VMware.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">Windows Server</span>
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">Active Directory</span>
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">VMware</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-lg overflow-hidden flex flex-col">
+      <div class="winbar flex items-center gap-2 px-4 py-2.5">
+        <span class="dot" style="background:#f16057"></span><span class="dot" style="background:var(--amber)"></span><span class="dot" style="background:var(--emerald)"></span>
+        <span class="mono text-xs ml-2 truncate" style="color:var(--text-dim)">reseau-securise.log</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="font-medium mb-2 text-sm">Réseau d'entreprise sécurisé</h3>
+        <p class="text-xs mb-4 flex-1" style="color:var(--text-dim)">Architecture réseau Cisco avec routage inter-VLAN, serveurs DHCP/DNS et règles de pare-feu pour segmenter et sécuriser les flux.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">Cisco</span>
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">VLAN</span>
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">Pare-feu</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rounded-lg overflow-hidden flex flex-col">
+      <div class="winbar flex items-center gap-2 px-4 py-2.5">
+        <span class="dot" style="background:#f16057"></span><span class="dot" style="background:var(--amber)"></span><span class="dot" style="background:var(--emerald)"></span>
+        <span class="mono text-xs ml-2 truncate" style="color:var(--text-dim)">serveur-lamp.log</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="font-medium mb-2 text-sm">Serveur web sous Debian 13</h3>
+        <p class="text-xs mb-4 flex-1" style="color:var(--text-dim)">Déploiement complet d'une stack LAMP (Linux, Apache, MariaDB, PHP), de l'installation du système à la mise en ligne d'un site fonctionnel.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">Debian 13</span>
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">Apache</span>
+          <span class="skill-tag text-xs mono px-2 py-1 rounded">MariaDB/PHP</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="border-t" style="border-color:var(--border)">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 py-14">
+    <p class="mono text-xs prompt mb-2" style="color:var(--text-dim)">ping charles --contact</p>
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Discutons de votre besoin</h2>
+    <p class="max-w-lg text-sm mb-8" style="color:var(--text-dim)">Disponible immédiatement pour une alternance TSSR, rythme 3 semaines en entreprise / 1 semaine au CFA. N'hésitez pas à me contacter.</p>
+    <div class="flex flex-wrap gap-3 mb-10">
+      <a href="mailto:charles_lauret@outlook.fr" class="mono text-xs px-4 py-2.5 rounded font-medium" style="background:var(--cobalt); color:#fff;">charles_lauret@outlook.fr</a>
+      <a href="https://www.linkedin.com/in/charles-lauret" target="_blank" rel="noopener" class="mono text-xs px-4 py-2.5 rounded border hover:border-[var(--cobalt)] transition-colors" style="border-color:var(--border);">LinkedIn</a>
+      <a href="https://github.com/lauretcharles27-jpg" target="_blank" rel="noopener" class="mono text-xs px-4 py-2.5 rounded border hover:border-[var(--cobalt)] transition-colors" style="border-color:var(--border);">GitHub</a>
+    </div>
+    <p class="mono text-xs" style="color:var(--text-dim)">© 2026 Charles Lauret — process exited 0</p>
+  </div>
+</footer>
+
+</body>
+</html>
